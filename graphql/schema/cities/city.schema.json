@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "state_id": {
+                "type": "integer"
+              },
+              "country_id": {
+                "type": "integer"
+              },
+              "country_code": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "state_id",
+              "country_id",
+              "country_code",
+              "latitude",
+              "longitude"
+            ]
+          }
+        },
+        "required": [
+          "city"
+        ]
+      }
+    },
+    "required": [
+      "data"
+    ]
+  }

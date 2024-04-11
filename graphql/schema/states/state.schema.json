@@ -1,0 +1,170 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "country_id": {
+                "type": "integer"
+              },
+              "country_code": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "cities": {
+                "type": "object",
+                "properties": {
+                  "totalCount": {
+                    "type": "integer"
+                  },
+                  "edges": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "cursor": {
+                            "type": "string"
+                          },
+                          "node": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "cursor",
+                          "node"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "cursor": {
+                            "type": "string"
+                          },
+                          "node": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "cursor",
+                          "node"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "cursor": {
+                            "type": "string"
+                          },
+                          "node": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "cursor",
+                          "node"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "cursor": {
+                            "type": "string"
+                          },
+                          "node": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "name": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "id",
+                              "name"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "cursor",
+                          "node"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "totalCount",
+                  "edges"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "country_id",
+              "country_code",
+              "state_code",
+              "cities"
+            ]
+          }
+        },
+        "required": [
+          "state"
+        ]
+      }
+    },
+    "required": [
+      "data"
+    ]
+  }

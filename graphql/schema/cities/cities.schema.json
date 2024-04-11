@@ -1,0 +1,293 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "cities": {
+            "type": "object",
+            "properties": {
+              "totalCount": {
+                "type": "integer"
+              },
+              "edges": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cursor": {
+                        "type": "string"
+                      },
+                      "node": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "state_code": {
+                            "type": "string"
+                          },
+                          "country_code": {
+                            "type": "string"
+                          },
+                          "country_id": {
+                            "type": "integer"
+                          },
+                          "latitude": {
+                            "type": "number"
+                          },
+                          "longitude": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "state_code",
+                          "country_code",
+                          "country_id",
+                          "latitude",
+                          "longitude"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "cursor",
+                      "node"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cursor": {
+                        "type": "string"
+                      },
+                      "node": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "state_code": {
+                            "type": "string"
+                          },
+                          "country_code": {
+                            "type": "string"
+                          },
+                          "country_id": {
+                            "type": "integer"
+                          },
+                          "latitude": {
+                            "type": "number"
+                          },
+                          "longitude": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "state_code",
+                          "country_code",
+                          "country_id",
+                          "latitude",
+                          "longitude"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "cursor",
+                      "node"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cursor": {
+                        "type": "string"
+                      },
+                      "node": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "state_code": {
+                            "type": "string"
+                          },
+                          "country_code": {
+                            "type": "string"
+                          },
+                          "country_id": {
+                            "type": "integer"
+                          },
+                          "latitude": {
+                            "type": "number"
+                          },
+                          "longitude": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "state_code",
+                          "country_code",
+                          "country_id",
+                          "latitude",
+                          "longitude"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "cursor",
+                      "node"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cursor": {
+                        "type": "string"
+                      },
+                      "node": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "state_code": {
+                            "type": "string"
+                          },
+                          "country_code": {
+                            "type": "string"
+                          },
+                          "country_id": {
+                            "type": "integer"
+                          },
+                          "latitude": {
+                            "type": "number"
+                          },
+                          "longitude": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "state_code",
+                          "country_code",
+                          "country_id",
+                          "latitude",
+                          "longitude"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "cursor",
+                      "node"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "cursor": {
+                        "type": "string"
+                      },
+                      "node": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "state_code": {
+                            "type": "string"
+                          },
+                          "country_code": {
+                            "type": "string"
+                          },
+                          "country_id": {
+                            "type": "integer"
+                          },
+                          "latitude": {
+                            "type": "number"
+                          },
+                          "longitude": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "name",
+                          "state_code",
+                          "country_code",
+                          "country_id",
+                          "latitude",
+                          "longitude"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "cursor",
+                      "node"
+                    ]
+                  }
+                ]
+              },
+              "pageInfo": {
+                "type": "object",
+                "properties": {
+                  "hasNextPage": {
+                    "type": "boolean"
+                  },
+                  "hasPreviousPage": {
+                    "type": "boolean"
+                  },
+                  "endCursor": {
+                    "type": "string"
+                  },
+                  "startCursor": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "hasNextPage",
+                  "hasPreviousPage",
+                  "endCursor",
+                  "startCursor"
+                ]
+              }
+            },
+            "required": [
+              "totalCount",
+              "edges",
+              "pageInfo"
+            ]
+          }
+        },
+        "required": [
+          "cities"
+        ]
+      }
+    },
+    "required": [
+      "data"
+    ]
+  }
