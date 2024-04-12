@@ -1,4 +1,4 @@
-## Automação de Serviço
+## Automação de Serviço [![Run Tests](https://github.com/pricaimiTech/geographqlJestAPI/actions/workflows/main.yml/badge.svg)](https://github.com/pricaimiTech/geographqlJestAPI/actions/workflows/main.yml)
 
 ### Tecnologias utilizadas
 
