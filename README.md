@@ -2,14 +2,21 @@
 
 ### Tecnologias utilizadas
 
-node version v18.16.1
+- [Node.js](https://nodejs.org/en) v18.17.1
+- [JEST](https://jestjs.io/pt-BR/docs/expect)
+- [esLint](https://eslint.org)
+- [Babel](https://babeljs.io)
 
-### Como configurar o projeto
+### Documentação da API
 
-- Acesse a pasta do repositório que deseja rodar os testes
+A documentação da API geographql pode ser consulta [NESTE LINK](https://geographql.netlify.app/docs/queries/country)
+
+### Como configurar e rodar o projeto
+
+- Instale todas as dependencias
 
 ```
-    cd geographqlJestAPI/
+    yarn
 ```
 
 - Rode os testes com o comando abaixo
@@ -22,11 +29,15 @@ node version v18.16.1
 
 Dentro da pasta de `__Test__` se encontra as validações e requisições para realizar testes de contrato e serviço da aplicação.
 
+A pasta `coverage` armazena os dados do relatório de execução gerada
+
 A pasta `environemnt` armazena dados fixos a serem usados nos testes
 
 A pasta `graphql/query` armazena as querys e variabels
 
 A pasta `graphql/schema` armazena os schemas
+
+Na parta `helpers/date` estão armazenadas as listas de massa de teste
 
 Na parta `helpers/utils` são funções utilitarias daquele serviço que poderão ser utilizadas em outros repositórios.
 
@@ -36,11 +47,13 @@ Com o arquivo `jest.config.mjs` será feito a configuração dos testes.
 
 ```
 ├── __Test__
+├── coverage
 ├── environment
 ├── graphql
     ├── query/
     ├── schema/
 ├── helpers
+    ├── date/
     ├── utils/
 ├── README.md
 ```

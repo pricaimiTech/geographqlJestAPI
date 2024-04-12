@@ -1,4 +1,4 @@
-export const queryData = () => ({
+export const queryDataStates = () => ({
   query: `query states($filter: StateFilterInput, $pagination: PaginationInput) {
         states(filter: $filter, page: $pagination) {
           totalCount

@@ -1,4 +1,4 @@
-export const queryData = (country_code, state_code) => ({
+export const queryDataState = (country_code, state_code) => ({
   query: `query state($locationCode: StateCountryCodeInput ) {
         state(locationCode: $locationCode){
           id
