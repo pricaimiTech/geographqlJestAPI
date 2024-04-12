@@ -1,24 +1,35 @@
-/**
- * importar request default
- */
 import { requestGraphql } from "../helpers/utils/request";
 import { schemaValidator } from "../helpers/utils/schemaValidator";
-
-/**
- * query, variable e schema
- */
 import { queryData } from "../graphql/query/countries/countries";
+import { getObjectList } from "../helpers/utils";
+import { subregion } from "../helpers/date/subregioes";
 
 describe("Teste Query Countries", () => {
+  var region = getObjectList(subregion);
   var responseBody = null;
-  var schema = require("../graphql/schema/contries/countries.schema.json");
-  test("says hello", async () => {
-    // send our request to the url of the test server
-    responseBody = await requestGraphql(queryData("Southern_Europe"));
-    console.log(responseBody.body);
+
+  beforeAll(async () => {
+    try {
+      responseBody = await requestGraphql(queryData(region));
+    } catch (error) {
+      throw new Error(`Erro ao enviar solicitação GraphQL: ${error.message}`);
+    }
+  });
+
+  test("Validar retorno de response válido", async () => {
+    expect(responseBody.body).toBeDefined();
+  });
+
+  test("Verificar código de status", async () => {
+    expect(responseBody.statusCode).toBe(200);
   });
 
   test("Validar contrato", async () => {
-    await schemaValidator(responseBody.body, schema);
+    const schema = require("../graphql/schema/contries/countries.schema.json");
+    try {
+      await schemaValidator(responseBody.body, schema);
+    } catch (error) {
+      throw new Error(`Erro ao validar contrato: ${error.message}`);
+    }
   });
 });
