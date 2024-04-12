@@ -1,4 +1,4 @@
-export const queryData = (cursor) => ({
+export const queryDataCities = (cursor) => ({
   query: `query cities($filter: CityFilterInput, $pagination: PaginationInput) {
         cities(filter: $filter, page: $pagination) {
           totalCount

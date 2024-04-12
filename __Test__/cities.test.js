@@ -1,17 +1,17 @@
 import { requestGraphql } from "../helpers/utils/request";
 import { schemaValidator } from "../helpers/utils/schemaValidator";
 import { queryDataStates } from "../graphql/query/states/states";
-import { queryDataState } from "../graphql/query/states/state";
+import { queryDataCities } from "../graphql/query/cities/cities"; 
 import { getRandomNumber } from "../helpers/utils/random";
 
-describe("Teste Query State", () => {
+describe("Teste Query Cities", () => {
   let stateObj = null;
   let responseBody = null;
 
   beforeAll(async () => {
     try {
       stateObj = await getRandomState();
-      responseBody = await requestStateData(stateObj.node.country_code, stateObj.node.state_code);
+      responseBody = await requestCitiesData(stateObj.cursor);
     } catch (error) {
       throw new Error(`Erro durante a execução dos testes: ${error.message}`);
     }
@@ -27,9 +27,9 @@ describe("Teste Query State", () => {
     }
   }
 
-  async function requestStateData(countryCode, stateCode) {
+  async function requestCitiesData(cursor) {
     try {
-      return await requestGraphql(queryDataState(countryCode, stateCode));
+      return await requestGraphql(queryDataCities(cursor));
     } catch (error) {
       throw new Error(`Erro ao enviar solicitação GraphQL para o estado: ${error.message}`);
     }
@@ -44,7 +44,7 @@ describe("Teste Query State", () => {
   });
 
   test("Validar contrato", async () => {
-    const stateSchema = require("../graphql/schema/states/state.schema.json");
+    const stateSchema = require("../graphql/schema/cities/cities.schema.json");
 
     try {
       await schemaValidator(responseBody.body, stateSchema);
@@ -53,7 +53,17 @@ describe("Teste Query State", () => {
     }
   });
 
-  test("Validar que o estado retornou cidades", () => {
-    expect(responseBody.body.data.state.cities.edges.length).toBeGreaterThanOrEqual(0);
+  test("Validar que as cidades pertencem ao estado dos US", () => {
+    const cities = responseBody.body.data.cities.edges;
+    let allInUS = true;
+  
+    cities.forEach(city => {
+      if (city.node.country_code !== 'US') {
+        allInUS = false;
+      }
+    });
+  
+    expect(allInUS).toBe(true);
   });
+  
 });

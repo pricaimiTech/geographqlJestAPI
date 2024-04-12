@@ -1,17 +1,20 @@
 import { requestGraphql } from "../helpers/utils/request";
 import { schemaValidator } from "../helpers/utils/schemaValidator";
 import { queryDataStates } from "../graphql/query/states/states";
-import { queryDataState } from "../graphql/query/states/state";
+import { queryDataCities } from "../graphql/query/cities/cities";
+import { queryDataCity } from "../graphql/query/cities/city";
 import { getRandomNumber } from "../helpers/utils/random";
 
-describe("Teste Query State", () => {
+describe("Teste Query City", () => {
   let stateObj = null;
+  let citiesObj = null;
   let responseBody = null;
 
   beforeAll(async () => {
     try {
       stateObj = await getRandomState();
-      responseBody = await requestStateData(stateObj.node.country_code, stateObj.node.state_code);
+      citiesObj = await requestCitiesData(stateObj.cursor);
+      responseBody = await requestCityData(citiesObj.node.id);
     } catch (error) {
       throw new Error(`Erro durante a execução dos testes: ${error.message}`);
     }
@@ -27,11 +30,21 @@ describe("Teste Query State", () => {
     }
   }
 
-  async function requestStateData(countryCode, stateCode) {
+  async function requestCitiesData(cursor) {
     try {
-      return await requestGraphql(queryDataState(countryCode, stateCode));
+      const citiesResponse = await requestGraphql(queryDataCities(cursor));
+      const index = getRandomNumber(0, citiesResponse.body.data.cities.totalCount);
+      return citiesResponse.body.data.cities.edges[index];
     } catch (error) {
       throw new Error(`Erro ao enviar solicitação GraphQL para o estado: ${error.message}`);
+    }
+  }
+
+  async function requestCityData(cityCursor) {
+    try {
+      return await requestGraphql(queryDataCity(cityCursor));
+    } catch (error) {
+      throw new Error(`Erro ao enviar solicitação GraphQL para a cidade: ${error.message}`);
     }
   }
 
@@ -44,16 +57,17 @@ describe("Teste Query State", () => {
   });
 
   test("Validar contrato", async () => {
-    const stateSchema = require("../graphql/schema/states/state.schema.json");
+    const citySchema = require("../graphql/schema/cities/city.schema.json");
 
     try {
-      await schemaValidator(responseBody.body, stateSchema);
+      await schemaValidator(responseBody.body, citySchema);
     } catch (error) {
       throw new Error(`Erro ao validar contrato: ${error.message}`);
     }
   });
 
-  test("Validar que o estado retornou cidades", () => {
-    expect(responseBody.body.data.state.cities.edges.length).toBeGreaterThanOrEqual(0);
+  test("Validar a sigla do País", () => {
+    expect(responseBody.body.data.city.country_code).toEqual(citiesObj.node.country_code);
   });
+  
 });

@@ -1,4 +1,4 @@
-export const queryData = (cityID) => ({
+export const queryDataCity = (cityID) => ({
   query: `{
         city(id: ${cityID}) {
           # City Fields
