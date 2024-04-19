@@ -23,3 +23,10 @@ jobs:
 
     - name: Run tests
       run: yarn test
+
+    - name: Archive Test Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-report
+        path: coverage/
+
