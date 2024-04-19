@@ -27,4 +27,6 @@ jobs:
       with:
         name: test-report
         path: coverage/
+    - name: Deploy report
+      run: cp coverage/lcov-report/index.html
 
