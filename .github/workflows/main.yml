@@ -11,14 +11,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        node-version: '20'
+      uses: actions/checkout@v4.1.3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      uses: actions/setup-node@v4.0.2
 
     - name: Install dependencies
       run: yarn
@@ -29,7 +25,6 @@ jobs:
     - name: Archive Test Report
       uses: actions/upload-artifact@v4
       with:
-        node-version: '20'
         name: test-report
         path: coverage/
 
