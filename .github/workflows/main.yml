@@ -15,6 +15,8 @@ jobs:
 
     - name: Set up Node.js
       uses: actions/setup-node@v4.0.2
+      with:
+        node-version: '20' # Adiciona versão do Node.js
 
     - name: Install dependencies
       run: yarn
@@ -23,16 +25,15 @@ jobs:
       run: yarn test
 
     - name: Archive Test Report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v2 # Correção da versão
+      with:
+        name: test-report
+        path: coverage/ # Adiciona caminho para o artefato
+
+    - name: Download Test Report Artifact
+      uses: actions/download-artifact@v2 # Correção da versão
       with:
         name: test-report
 
-    - name: Download Test Report Artifact
-      uses: actions/download-artifact@v4.1.5
-      with:
-       name: test-report
-
     - name: Copy Report to GitHub Pages
-      run: cp test-report/coverage/*
-
-
+      run: cp -r test-report/* . # Cópia recursiva para o GitHub Pages
