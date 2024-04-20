@@ -37,6 +37,6 @@ jobs:
       run: ls -la
       
     - name: Copy Report to GitHub Pages
-      run: cp -r test-report/* . # Cópia recursiva para o GitHub Pages
+      run: cp -r coverage/* . # Cópia recursiva para o GitHub Pages
 
     
