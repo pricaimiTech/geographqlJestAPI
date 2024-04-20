@@ -28,8 +28,25 @@ jobs:
         name: test-report
         path: coverage/ # Adiciona caminho para o artefato
 
+    - name: Download Test Report Artifact
+      uses: actions/download-artifact@v4.1.5 # Correção da versão
+      with:
+        name: test-report
+
+    - name: Create 'docs' Directory
+      run: mkdir -p docs  # Cria a pasta 'docs'
+
     - name: List Files
       run: ls -la
+
+    - name: Copy Report to 'docs'
+      run: cp -r coverage/*  docs/ # Copia o artefato para a pasta 'docs'
+
+    - name: List 'docs' Files
+      run: ls -la
+      
+    - name: Copy Report to GitHub Pages
+      run: cp -r coverage/* . # Cópia recursiva para o GitHub Pages
 
     - name: Publish test coverage report
       uses: EndBug/add-and-commit@v4
