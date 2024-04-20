@@ -36,6 +36,9 @@ jobs:
     - name: Create 'docs' Directory
       run: mkdir -p docs  # Cria a pasta 'docs' se não existir
 
+    - name: Create .nojekyll File
+      run: touch docs/.nojekyll
+
     - name: Copy Report to 'docs'
       run: cp -r coverage/* docs/  # Copia o conteúdo para 'docs'
 
