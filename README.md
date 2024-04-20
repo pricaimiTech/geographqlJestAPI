@@ -9,7 +9,7 @@
 
 ### Documentação da API
 
-A documentação da API geographql pode ser consulta [NESTE LINK](https://geographql.netlify.app/docs/queries/country)
+A documentação da API geographql pode ser consulta [link da documentação](https://geographql.netlify.app/docs/queries/country)
 
 ### Como configurar e rodar o projeto
 
@@ -22,7 +22,7 @@ A documentação da API geographql pode ser consulta [NESTE LINK](https://geogra
 - Rode os testes com o comando abaixo
 
 ```
- yarn test
+  yarn test
 ```
 
 ### Organização dos testes
