@@ -1,9 +1,14 @@
 name: Run Tests
 
+# Define as permissões necessárias para este workflow
+permissions:
+  contents: write  # Permite escrever no repositório
+
+# Define os eventos que acionam o workflow
 on:
   push:
     branches:
-      - main
+      - main  # Aciona quando há um push para a branch 'main'
 
 jobs:
   test:
