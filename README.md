@@ -25,6 +25,10 @@ A documentação da API geographql pode ser consulta [link da documentação](ht
   yarn test
 ```
 
+### Acesse o report 
+
+Para acessar o report da última execução click no [link](https://pricaimitech.github.io/geographqlJestAPI/docs/lcov-report/index.html)
+
 ### Organização dos testes
 
 Dentro da pasta de `__Test__` se encontra as validações e requisições para realizar testes de contrato e serviço da aplicação.
