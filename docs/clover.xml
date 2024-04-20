@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1713654151520" clover="3.2.0">
+  <project timestamp="1713654151520" name="All files">
+    <metrics statements="27" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="10" elements="38" coveredelements="36" complexity="0" loc="27" ncloc="27" packages="6" files="14" classes="14"/>
+    <package name="environment">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="stg.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/environment/stg.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="graphql.query.cities">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="cities.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/cities/cities.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+      <file name="city.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/cities/city.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="graphql.query.countries">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="countries.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/countries/countries.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="country.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/countries/country.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="graphql.query.states">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="state.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/states/state.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="states.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/graphql/query/states/states.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers.date">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="countriesISO3.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/date/countriesISO3.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="subregioes.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/date/subregioes.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers.utils">
+      <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+      <file name="index.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/utils/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="logs.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/utils/logs.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+      <file name="random.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/utils/random.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+      <file name="request.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/utils/request.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+      </file>
+      <file name="schemaValidator.js" path="/home/runner/work/geographqlJestAPI/geographqlJestAPI/helpers/utils/schemaValidator.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
