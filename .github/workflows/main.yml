@@ -33,6 +33,12 @@ jobs:
       with:
         name: test-report
 
+    - name: Create 'docs' Directory
+      run: mkdir -p docs  # Cria a pasta 'docs'
+
+    - name: Copy Report to 'docs'
+      run: cp -r coverage/* # Copia o artefato para a pasta 'docs'
+
     - name: List Files
       run: ls -la
       
