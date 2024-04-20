@@ -40,7 +40,10 @@ jobs:
       run: ls -la
 
     - name: Copy Report to 'docs'
-      run: cp -r test-report/coverage/* # Copia o artefato para a pasta 'docs'
+      run: cp -r coverage/*  docs/ # Copia o artefato para a pasta 'docs'
+
+    - name: List 'docs' Files
+      run: ls -la
       
     - name: Copy Report to GitHub Pages
       run: cp -r coverage/* . # Cópia recursiva para o GitHub Pages
